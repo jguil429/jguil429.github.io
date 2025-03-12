@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .card {
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -14,26 +17,26 @@
         backface-visibility: hidden;
         border-radius: 5px;
         overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, .15);
 
 
         &--front {
-            background-color: $color-white;
+            background-color: variables.$color-white;
         }
 
         &--back {
             transform: rotateY(180deg);
 
             &-1 {
-                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary);
+                background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary);
             }
 
             &-2 {
-                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark);
             }
 
             &-3 {
-                background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+                background-image: linear-gradient(to right bottom, variables.$color-primary, variables.$color-primary-dark);
             }
         }
     }
@@ -57,15 +60,15 @@
         border-top-right-radius: 5px;
         
         &--1 {
-            background-image:linear-gradient(to right bottom, $color-primary-light, $color-primary), url(../img/scs_taxforms1.jpg);
+            background-image:linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary), url(../img/scs_taxforms1.jpg);
         }
 
         &--2 {
-            background-image:linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+            background-image:linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark), url(../img/nat-6.jpg);
         }
 
         &--3 {
-            background-image:linear-gradient(to right bottom, $color-primary, $color-primary-dark), url(../img/nat-7.jpg);
+            background-image:linear-gradient(to right bottom, variables.$color-primary, variables.$color-primary-dark), url(../img/nat-7.jpg);
         }
     }
 
@@ -74,7 +77,7 @@
         font-weight: 300;
         text-transform: uppercase;
         text-align: right;
-        color: $color-white;
+        color: variables.$color-white;
         position: absolute;
         top: 12rem;
         right: 2rem;
@@ -86,15 +89,15 @@
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
         &--1 {
-            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary, .85));
+            background-image: linear-gradient(to right bottom, rgba(variables.$color-primary-light, .85), rgba(variables.$color-primary, .85));
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
+            background-image: linear-gradient(to right bottom, rgba(variables.$color-primary-light, .85), rgba(variables.$color-primary-dark, .85));
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, rgba($color-primary, .85), rgba($color-primary-dark, .85));
+            background-image: linear-gradient(to right bottom, rgba(variables.$color-primary, .85), rgba(variables.$color-primary-dark, .85));
         }
     }
 
@@ -112,7 +115,7 @@
                 padding: 1rem;
 
                 &:not(:last-child) {
-                    border-bottom: 1px solid $color-grey-light-2;
+                    border-bottom: 1px solid variables.$color-grey-light-2;
                 }
             }
         }
@@ -131,7 +134,7 @@
     &__price-box {
         text-align: center;
         margin-bottom: 8rem;
-        color: $color-white;
+        color: variables.$color-white;
     }
 
     &__price-only {
@@ -144,11 +147,11 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    @include mixins.respond(tab-port) {
         height: auto;
         border-radius: 5px;
-        background-color: $color-white;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        background-color: variables.$color-white;
+        box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, .15);
 
     &__side {
         height: auto;

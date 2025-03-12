@@ -39,15 +39,16 @@
         </header>
         <main>
             <section class="section-about" id="section-about">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
+                <div class="u-center-text">
+                    <h2 class="heading-secondary u-margin-top-huge u-margin-bottom-medium">
                       About Me
                     </h2>
                 </div>
 
-                <div class="row">
+                <div class="row u-margin-bottom-big u-about-me-flex">
                     <div class="col-1-of-2">
-                        <p class="paragraph">Jennie Guillot is a dynamic and versatile professional dancer and aerialist with a passion for creativity and technology. With a rich background in performing arts and a newfound enthusiasm for coding, Jennie is transitioning into the world of front-end web development. Jennie has spent over a decade captivating audiences with her exceptional talent and dedication to dance and circus. She has trained with renowned dance companies, participated in international festivals, and choreographed for various productions. Her experience spans multiple dance and aerial genres, showcasing her adaptability and commitment to her craft. Driven by a desire to expand her creative horizons, Jennie embarked on a journey to learn coding. She has completed several online courses and bootcamps, focusing on front-end web development. Her background in dance has instilled in her a keen eye for aesthetics and a meticulous attention to detail, which she seamlessly integrates into her web development projects.</div>
+                        <p class="paragraph">Jennie Guillot is a front-end web developer and graphic designer with a passion for creating elegant and effective online experiences. Drawing on years of experience in the performing arts as a dancer and aerialist, Jennie brings a keen eye for design and a strong work ethic to every project. Her technical skills include HTML5, CSS3, JavaScript ES6, React, Tailwind CSS, and experience with back-end technologies such as Node and Express. She is adept at responsive design and committed to delivering high-quality, user-centric solutions.</p>
+                    </div>
                     <div class="col-1-of-2">
                         <div class="composition">
                             <img src="img/port-3.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
@@ -56,8 +57,13 @@
                 </div>
             </section> 
             <section class="section-features" id="proficiencies">
+                <div class="u-center-text">
+                    <h2 class="heading-proficiencies">
+                        Proficiencies
+                    </h2>
+                </div>
                 <div class="row">
-                    <div class="col-1-of-1">
+                    <div class="col-1-of-1 u-full-width u-margin-proficiencies">
                         <div class="feature-box">
                             <div class="feature-box__column">
                                 <i class="feature-box__icon material-symbols-outlined">
@@ -243,6 +249,13 @@
                 </div>
                 </div>
             </div>
-        </footer>      
+        </footer>
+        <script>
+            document.querySelectorAll('.navigation__link').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.getElementById('navi-toggle').checked = false;
+                });
+            });
+        </script>
     </body>
 </html>

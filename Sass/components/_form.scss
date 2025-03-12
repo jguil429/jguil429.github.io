@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .form {
     &__group:not(:last-child) {
         margin-bottom: 2rem;
@@ -9,30 +12,30 @@
         color: inherit;
         padding: 1.5rem 2rem;
         border-radius: 2px;
-        background-color: rgba($color-white, .5);
+        background-color: rgba(variables.$color-white, .5);
         border: none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
         transition: all .3s;
 
-        @include respond(tab-port) {
+        @include mixins.respond(tab-port) {
             width: 100%;
         }
 
         &:focus {
             outline: none;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
-            border-bottom: 3px solid $color-primary;
+            box-shadow: 0 1rem 2rem rgba(variables.$color-black, .1);
+            border-bottom: 3px solid variables.$color-primary;
         }
 
         &:focus:invalid {
-            border-bottom: 3px solid $color-secondary-dark;
+            border-bottom: 3px solid variables.$color-secondary-dark;
         }
 
     
         &::-webkit-input-placeholder {
-            color: $color-grey-dark-2
+            color: variables.$color-grey-dark-2
         }
     }
 
@@ -55,7 +58,7 @@
         width: 49%;
         display: inline-block;
 
-        @include respond(tab-port) {
+        @include mixins.respond(tab-port) {
             width: 100%;
             margin-bottom: 2rem;
         }
@@ -66,7 +69,7 @@
     }
 
     &__radio-label {
-        font-size: $default-font-size;
+        font-size: variables.$default-font-size;
         cursor: pointer;
         position: relative;
         padding-left: 3.5rem;
@@ -75,7 +78,7 @@
     &__radio-button {
         height: 3rem;
         width: 3rem;
-        border: 5px solid $color-primary;
+        border: 5px solid variables.$color-primary;
         border-radius: 50%;
         display: inline-block;
         position: absolute;
@@ -92,7 +95,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $color-primary;
+            background-color: variables.$color-primary;
             opacity: 0;
             transition: opacity .2s;
         }
